@@ -1,7 +1,3 @@
-/**
- * script.js - Wordly Dictionary Application
- * Refined to meet "Excelled" criteria for the summative lab.
- */
 
 const form = document.getElementById('search-form');
 const input = document.getElementById('word-input');
