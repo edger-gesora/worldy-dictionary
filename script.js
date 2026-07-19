@@ -1,4 +1,3 @@
-
 const form = document.getElementById('search-form');
 const input = document.getElementById('word-input');
 const results = document.getElementById('results-section');
@@ -35,17 +34,16 @@ form.addEventListener('submit', async (e) => {
 
 /**
  * Data Display & DOM Manipulation:
- * Renders data cleanly and handles missing information gracefully.
  */
 function renderResults(data) {
     const meaning = data.meanings[0];
     const defObj = meaning.definitions[0];
     
-    // Fallback content to ensure data is always displayed
+    // Fallback content to ensure data is always displayed.
     const definition = defObj.definition || "No definition available.";
     const example = defObj.example ? `<p><em>Example: "${defObj.example}"</em></p>` : "<p><em>No example available.</em></p>";
     
-    // DOM Manipulation: Seamless, responsive, and user-friendly update
+    // DOM Manipulation: Seamless, responsive, and user-friendly.
     results.innerHTML = `
         <h3>${data.word.toUpperCase()}</h3>
         <p><strong>Part of Speech:</strong> ${meaning.partOfSpeech}</p>
